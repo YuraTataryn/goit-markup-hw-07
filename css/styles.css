@@ -160,26 +160,26 @@ h1,h2,h3,h4,h5,h6,p,ul{
 @media only screen and (min-width: 429px) and (max-width: 768px) {
     .section-first {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/images.raster/people-office1@1x.jpg);
+        url(../images/images.raster/Dark-bigest@1x.jpg);
     }
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         .section-first{
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/images.raster/people-office1@2x.jpg)
+            url(../images/images.raster/Dark-bigest@2x.jpg);
         }
     }
 }
 @media only screen and (min-width: 769px) {
     .section-first {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/images.raster/Dark-bigest@1x.jpg);
+        url(../images/images.raster/people-office1@1x.jpg);
     }
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
             .section-first {
                 background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                url(../images/images.raster/Dark-bigest@2x.jpg)
+                url(../images/images.raster/people-office1@2x.jpg);
             }
         }
 }
@@ -731,6 +731,24 @@ transition: color var(--transition-time) var(--animation-delay);
     gap: 24px;
     margin-bottom: 72px;
 }
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .button-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        row-gap: 16px;
+        min-height: 96px;
+        min-width: 148px;
+        margin: 48px 149px 48px 16px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .button-list {
+        display: flex;
+        gap: 24px;
+        margin: 64px 91px;
+    }
+}
 .portfolio-button{
     padding: 12px 24px;
     border-radius: 4px;
@@ -1210,6 +1228,11 @@ input[type="email"]::placeholder{
 }
 .menu-container.is-open {
     transform: translateX(0);
+}
+@media only screen and (min-width: 768px) {
+    .menu-container {
+        display: none;
+    }
 }
 .menu-container .menu-toggle {
     position: absolute;
