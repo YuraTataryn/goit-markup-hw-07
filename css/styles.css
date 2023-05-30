@@ -10,6 +10,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0 16px;
+    width: 100%;
 }
 /* Tablet styles */
 @media only screen and (min-width: 768px) {
@@ -27,10 +28,11 @@
     display: flex;
     align-items: center;
 }
-@media only screen and (min-width: 320px) and (max-width: 1199px) {
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
     .box {
-        margin-right: 0;
-        margin-left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0;
     }
 }
 .header{
@@ -154,6 +156,16 @@ h1,h2,h3,h4,h5,h6,p,ul{
     margin-left: auto;
     margin-right: auto;
 }
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .section-first {
+        padding: 112px 136px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .section-first {
+        padding: 112px 54px;
+    }
+}
 @media only screen and (max-width: 428px) {
     .section-first{
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -193,6 +205,11 @@ h1,h2,h3,h4,h5,h6,p,ul{
                 url(../images/images.raster/people-office1@2x.jpg);
             }
         }
+}
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+    .container-first {
+        padding: 0;
+    }
 }
 .section-second{
     padding: 96px 0;
@@ -307,20 +324,10 @@ h1,h2,h3,h4,h5,h6,p,ul{
 .item-fase{
     flex-basis: calc((100% - 48px) / 3);
 }
-@media only screen and (max-width: 1199px) {
-    .section-fourth{
-        margin-bottom: 96px;
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+    .section-fourth {
+        padding: 96px 0;
         background-color: var(--second-white-text);
-    }
-}
-@media only screen and (min-width: 320px) and (max-width: 767px) {
-    .section-fourth {
-        padding: 82px 0;
-    }
-}
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-    .section-fourth {
-        padding: 96px 0; 
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -373,6 +380,7 @@ h1,h2,h3,h4,h5,h6,p,ul{
 }
 .fase-list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 72px 24px;
 }
@@ -388,8 +396,6 @@ h1,h2,h3,h4,h5,h6,p,ul{
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
     .fase-list {
-        min-width: 552px;
-        margin: 72px 108px 96px 75px;
         gap: 64px 24px;
     }
 }
@@ -410,9 +416,19 @@ h1,h2,h3,h4,h5,h6,p,ul{
     padding-top: 120px;
     padding-bottom: 120px;
 }
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+    .section-fifth {
+        padding: 96px 0;
+    }
+}
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
     .section-fifth {
-        margin: 0 108px 96px 108px;
+        padding: 96px 108px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .box-costumers {
+        padding: 0;
     }
 }
 .icon-list{
@@ -425,11 +441,11 @@ h1,h2,h3,h4,h5,h6,p,ul{
         flex-wrap: nowrap;
     }
 }
-/* @media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
     .icon-list {
-        width: 396px;
+        gap: 72px 24px;
     }
-} */
+}
 .icon-item{
     flex-wrap: wrap;
     width: calc((100% - 120px) / 6);
@@ -478,6 +494,7 @@ h1,h2,h3,h4,h5,h6,p,ul{
 @media only screen and (min-width: 320px) and (max-width: 767px) {
     .logo-link {
         margin-right: 0;
+        padding: 24px 0;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
@@ -540,6 +557,7 @@ transition: color var(--transition-time) var(--animation-delay);
     font-size: 36px;
     line-height: 1.1;
     letter-spacing: 0.02em;
+    text-decoration: none;
     color: var(--title-text-color);
 }
 .mobile-link.numbers{
@@ -553,6 +571,7 @@ transition: color var(--transition-time) var(--animation-delay);
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    text-decoration: none;
     color: var(--base-text-color);
 }
 .container-first{
@@ -565,7 +584,11 @@ transition: color var(--transition-time) var(--animation-delay);
     color: var(--primary-text-color);
     text-align: center;
     max-width: 496px;
-    margin: 0 auto 72px;
+}
+@media only screen and (min-width: 1200px) {
+    .title {
+        margin: 0 auto 72px;
+    }
 }
 @keyframes move-to-left {
     0%{
@@ -580,9 +603,14 @@ transition: color var(--transition-time) var(--animation-delay);
         transform: translateX(0);
     }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
     .title {
-        margin-bottom: 36px;
+        margin-bottom: 72px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .title {
+        margin: 0 auto 36px;
         font-size: 56px;
         line-height: 1.07;
     }
@@ -678,16 +706,6 @@ transition: color var(--transition-time) var(--animation-delay);
         font-weight: 500;
     }
 }
-@media only screen and (max-width: 767px) {
-    .text.text-second {
-        max-height: 48px;
-    }
-}
-@media only screen and (min-width: 320px) {
-    .diligence {
-        max-height: 72px;
-    }
-}
 .subject{
         font-weight: 700;
         font-size: 36px;
@@ -700,7 +718,16 @@ transition: color var(--transition-time) var(--animation-delay);
 }
 .footer{
     background-color: var(--title-text-color);
-    padding: 96px 0;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .footer {
+        padding: 96px 15px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .footer {
+        padding: 96px 0 96px 108px;
+    }
 }
 @media only screen and (min-width: 1200px) {
     .footer {
@@ -727,7 +754,6 @@ transition: color var(--transition-time) var(--animation-delay);
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--accent-color);
-    margin-right: 76px;
     display: inline-block;
     margin-bottom: 16px;
 }
@@ -880,6 +906,7 @@ transition: color var(--transition-time) var(--animation-delay);
         flex-wrap: wrap;
         max-width: 768px;
         gap: 24px;
+        padding: 0;
     }
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -1152,16 +1179,10 @@ transition: color var(--transition-time) var(--animation-delay);
     display: flex;
     flex-direction: column;
 }
-@media screen and (max-width: 768px) {
-    .holder-container {
-        width: 100%;
-    }
-}
 @media only screen and (min-width: 320px) and (max-width: 767px) {
     .holder-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 16px;
         text-align: center;
         align-items: center;
     }
@@ -1173,16 +1194,21 @@ transition: color var(--transition-time) var(--animation-delay);
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
 }
+@media only screen and (min-width: 320px) {
+    .footer-form-text {
+       padding-bottom: 16px;
+    }
+}
 .booking-form {
     display: flex;
-    margin-top: 16px;
+    /* margin-top: 16px; */
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
     .booking-form {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 16px;
+        /* gap: 16px; */
         max-width: 398px;
         margin-left: auto;
         margin-right: auto;
@@ -1195,6 +1221,11 @@ transition: color var(--transition-time) var(--animation-delay);
     line-height: 2.0;
     letter-spacing: 0.04em;
     color: var(--primary-text-color);
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .footer-form-label {
+       padding-bottom: 16px;
+    }
 }
 .footer-form-input {
     border: 1px solid var(--primary-text-color);
@@ -1240,6 +1271,11 @@ input[type="email"]::placeholder{
     border: none;
     transition: background-color var(--transition-time) var(--animation-delay);
 }
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .footer-form-button {
+        margin-left: 0;
+    }
+}
 .footer-form-button:hover,
 .footer-form-button:focus{
     background-color: var(--bth-hover-color);
@@ -1281,7 +1317,7 @@ input[type="email"]::placeholder{
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 32px;
+    padding: 80px 0 40px 40px;
     background-color: var(--primary-text-color);
     z-index: 999;
     overflow: scroll;
