@@ -1339,7 +1339,7 @@ input[type="email"]::placeholder{
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vw;
+    height: 100%;
     padding: 80px 0 40px 40px;
     background-color: var(--primary-text-color);
     z-index: 999;
