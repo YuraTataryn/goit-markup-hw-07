@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 .container {
-    /* Phone styles */
     min-width: 320px;
     max-width: 428px;
     margin-left: auto;
@@ -12,13 +11,11 @@
     padding: 0 16px;
     width: 100%;
 }
-/* Tablet styles */
 @media only screen and (min-width: 768px) {
     .container {
         max-width: 736px;
     }
 }
-/* Desktop styles */
 @media only screen and (min-width: 1200px) {
     .container {
         max-width: 1158px;
@@ -161,9 +158,14 @@ h1,h2,h3,h4,h5,h6,p,ul{
         padding: 112px 136px;
     }
 }
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 428px) and (max-width: 767px) {
     .section-first {
         padding: 112px 54px;
+    }
+}
+@media only screen and (max-width: 427px) {
+    .section-first {
+        padding: 112px 0;
     }
 }
 @media only screen and (max-width: 428px) {
@@ -223,7 +225,12 @@ h1,h2,h3,h4,h5,h6,p,ul{
     margin: 0 auto;
     padding: 0 16px;
 }
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 427px) {
+    .box-section-second {
+        padding: 15px;
+    }
+}
+@media only screen and (min-width: 428px) and (max-width: 767px) {
     .box-section-second {
         padding: 0;
     }
@@ -581,9 +588,20 @@ transition: color var(--transition-time) var(--animation-delay);
     font-size: 36px;
     line-height:1.11;
     letter-spacing: 0.02em;
-    color: var(--primary-text-color);
     text-align: center;
     max-width: 496px;
+    color: var(--primary-text-color);
+}
+/* @media only screen and (min-width: 428px) {
+    .title {
+        text-align: center;
+        max-width: 496px;
+    }
+} */
+@media only screen and (max-width: 427px) {
+    .title {
+        margin: 0 auto;
+    }
 }
 @media only screen and (min-width: 1200px) {
     .title {
@@ -632,10 +650,10 @@ transition: color var(--transition-time) var(--animation-delay);
    cursor: pointer;
    display: block;
    min-width: 169px;
+   margin: 0 auto;
    height: 56px;
    border: none;
    border-radius: 4px;
-   margin: 0 auto;
    transition: background-color var(--transition-time) var(--animation-delay);
 }
 .button:hover,.button:focus{
@@ -719,7 +737,12 @@ transition: color var(--transition-time) var(--animation-delay);
 .footer{
     background-color: var(--title-text-color);
 }
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 427px) {
+    .footer {
+        padding: 96px 0;
+    }
+}
+@media only screen and (min-width: 428px) and (max-width: 767px) {
     .footer {
         padding: 96px 15px;
     }
@@ -1316,7 +1339,7 @@ input[type="email"]::placeholder{
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100vw;
     padding: 80px 0 40px 40px;
     background-color: var(--primary-text-color);
     z-index: 999;
