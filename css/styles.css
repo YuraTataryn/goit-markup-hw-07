@@ -615,6 +615,7 @@ transition: color var(--transition-time) var(--animation-delay);
 @media only screen and (min-width: 1200px) {
     .title {
         margin: 0 auto 72px;
+        font-size: 56px;
     }
 }
 @keyframes move-to-left {
