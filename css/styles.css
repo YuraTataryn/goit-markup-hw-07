@@ -612,12 +612,12 @@ transition: color var(--transition-time) var(--animation-delay);
         margin: 0 auto;
     }
 }
-@media only screen and (min-width: 1200px) {
+/* @media only screen and (min-width: 1200px) {
     .title {
         margin: 0 auto 72px;
         font-size: 56px;
     }
-}
+} */
 @keyframes move-to-left {
     0%{
         opacity: 0;
@@ -647,6 +647,9 @@ transition: color var(--transition-time) var(--animation-delay);
     .title{
         animation: move-to-left 800ms ease-in 600ms 3 alternate both;
         margin-bottom: 48px;
+        margin: 0 auto 72px;
+        font-size: 56px;
+        line-height: 1.07;
     }
 }
 .button{
