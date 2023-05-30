@@ -65,6 +65,11 @@
     align-items: center;
     margin-right: auto;
 }
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .nav-contacts{
+        margin-right: 0;
+    }
+}
 .contacts-list{
     display: flex;
     gap: 40px;
@@ -227,7 +232,7 @@ h1,h2,h3,h4,h5,h6,p,ul{
 }
 @media only screen and (min-width: 320px) and (max-width: 427px) {
     .box-section-second {
-        padding: 15px;
+        padding: 0 15px;
     }
 }
 @media only screen and (min-width: 428px) and (max-width: 767px) {
@@ -401,7 +406,12 @@ h1,h2,h3,h4,h5,h6,p,ul{
         flex-wrap: nowrap;
     }
 }
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 427px) {
+    .fase-list {
+        margin: 0;
+    }
+}
+@media only screen and (min-width: 428px) and (max-width: 767px) {
     .fase-list {
         margin: 0 66px;
     }
@@ -434,13 +444,8 @@ h1,h2,h3,h4,h5,h6,p,ul{
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
-    .section-fifth {
-        padding: 96px 108px;
-    }
-}
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
     .box-costumers {
-        padding: 0;
+        padding: 0 92px;
     }
 }
 .icon-list{
@@ -751,11 +756,6 @@ transition: color var(--transition-time) var(--animation-delay);
         padding: 96px 15px;
     }
 }
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-    .footer {
-        padding: 96px 0 96px 108px;
-    }
-}
 @media only screen and (min-width: 1200px) {
     .footer {
         padding: 100px 0;
@@ -933,7 +933,7 @@ transition: color var(--transition-time) var(--animation-delay);
         flex-wrap: wrap;
         max-width: 768px;
         gap: 24px;
-        padding: 0;
+        padding: 96px 0 96px 108px;
     }
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -1025,6 +1025,11 @@ transition: color var(--transition-time) var(--animation-delay);
     0px 1px 2px rgba(0, 0, 0, 0.2);
     background-color: var(--modal-color);
 }
+@media only screen and (min-width: 320px) and (max-width: 427px) {
+    .modal {
+        width: 95%;
+    }
+}
 .beckdrop.is-hidden .modal{
     transform: translate(-50%, -50%) rotate(360deg) scale(0,1);
     opacity: 0;
@@ -1100,6 +1105,11 @@ transition: color var(--transition-time) var(--animation-delay);
     transition: border-color var(--transition-time) var(--animation-delay),
     fill var(--transition-time) var(--animation-delay);
 }
+@media only screen and (min-width: 320px) and (max-width: 427px) {
+    .form-input {
+        width: 100%;
+    }
+}
 .form-input:focus-within {
     border-color: var(--accent-color);
 }
@@ -1114,6 +1124,11 @@ transition: color var(--transition-time) var(--animation-delay);
     border-radius: 4px;
     outline: 1px solid transparent;
     transition: border-color var(--transition-time) var(--animation-delay);
+}
+@media only screen and (min-width: 320px) and (max-width: 427px) {
+    .form-area {
+        width: 100%;
+    }
 }
 .form-area:focus-within {
     border-color: var(--accent-color);
@@ -1223,7 +1238,7 @@ transition: color var(--transition-time) var(--animation-delay);
 }
 @media only screen and (min-width: 320px) {
     .footer-form-text {
-       padding-bottom: 16px;
+       margin-bottom: 16px;
     }
 }
 .booking-form {
@@ -1251,7 +1266,7 @@ transition: color var(--transition-time) var(--animation-delay);
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
     .footer-form-label {
-       padding-bottom: 16px;
+       margin-bottom: 16px;
     }
 }
 .footer-form-input {
